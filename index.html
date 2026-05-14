@@ -1,170 +1,160 @@
-<!-- index.html - DevOps Engineer Portfolio Website (Standalone Version) -->
+# Modern DevOps Portfolio Layout (Different Design)
+
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vinod Dampuru | DevOps Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f5f7fa;
-      color: #333;
-      line-height: 1.6;
+      box-sizing: border-box;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
     }
 
-    header {
-      background-color: #1f2937;
-      color: #fff;
-      padding: 2rem 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
-    }
-
-    .contact a {
-      color: #93c5fd;
+    a {
       text-decoration: none;
-      margin: 0 0.5rem;
+      color: inherit;
     }
 
-    section {
-      margin-bottom: 2rem;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #111827, #1e293b, #0f172a);
+      padding: 40px;
     }
 
-    h2 {
-      color: #1f2937;
-      border-bottom: 2px solid #3b82f6;
-      padding-bottom: 0.5rem;
+    .hero-container {
+      max-width: 1200px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
     }
 
-    ul {
-      padding-left: 1.5rem;
+    .left h4 {
+      color: #38bdf8;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-size: 18px;
     }
 
-    li {
-      margin-bottom: 0.5rem;
+    .left h1 {
+      font-size: 60px;
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
 
-    footer {
+    .left h1 span {
+      color: #38bdf8;
+    }
+
+    .left p {
+      color: #cbd5e1;
+      margin-bottom: 25px;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .primary {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .primary:hover {
+      background: #0ea5e9;
+      transform: translateY(-3px);
+    }
+
+    .secondary {
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    .secondary:hover {
+      background: #38bdf8;
+      color: #0f172a;
+      transform: translateY(-3px);
+    }
+
+    .right {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 35px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+
+    .profile {
       text-align: center;
-      padding: 1rem;
-      background-color: #1f2937;
-      color: white;
+      margin-bottom: 30px;
     }
 
-    footer a {
-      color: #93c5fd;
-      text-decoration: none;
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      object-fit: cover;
+      margin-bottom: 15px;
     }
-  </style>
-</head>
 
-<body>
-  <header>
-    <div class="container">
-      <h1>Vinod Dampuru</h1>
-      <p>DevOps Engineer | Cloud | Kubernetes | CI/CD | Terraform</p>
-      <div class="contact">
-        <a href="mailto:vinoddampuru@outlook.com">vinoddampuru@outlook.com</a> | 
-        <a href="https://vinod733-code.github.io/Portfolio/" target="_blank">https://vinod733-code.github.io/Portfolio/</a> | 
-        <a href="https://www.linkedin.com/in/vinod-dampuru-33549b189/" target="_blank">LinkedIn</a> | 
-        +91 6305832504
-      </div>
-    </div>
-  </header>
+    .profile h2 {
+      margin-bottom: 8px;
+    }
 
-  <main class="container">
-    <section>
-      <h2>Objective</h2>
-      <p>DevOps Engineer with 3.5 years of experience in automating deployments, CI/CD pipelines, container orchestration, cloud infrastructure, observability, and legacy modernization. Skilled in delivering scalable, secure, and observable systems for monolithic and microservices architectures.</p>
-    </section>
+    .profile p {
+      color: #94a3b8;
+    }
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>CI/CD:</strong> Azure DevOps, Jenkins, Git, GitHub, Azure Repos, SonarQube, Trivy, Helm, Kubernetes manifests</li>
-        <li><strong>Containers:</strong> Docker, Kubernetes + Helm</li>
-        <li><strong>Databases:</strong> MySQL, Oracle, MongoDB, Redis</li>
-        <li><strong>Service Mesh:</strong> NGINX Ingress Controller, Istio</li>
-        <li><strong>Build Tools:</strong> Maven, Ant, Gradle, npm, MSBuild, pip, Composer, Docker buildx</li>
-        <li><strong>IaC:</strong> Terraform</li>
-        <li><strong>Registries:</strong> Nexus, JFrog, ECR</li>
-        <li><strong>Monitoring & Logging:</strong> Prometheus, Grafana, ELK, Fluentd, Loki, promtail, node exporter</li>
-        <li><strong>Config Management:</strong> Ansible</li>
-        <li><strong>Web Servers & OS:</strong> NGINX, Tomcat, Apache, Linux (advanced), Windows (intermediate)</li>
-        <li><strong>Scripting:</strong> Bash, Python (basic)</li>
-        <li><strong>Cloud:</strong> AWS (EC2, VPC, EKS, IAM, Route53, S3, Load Balancer, ACM, Secrets Manager, Auto Scaling)</li>
-      </ul>
-    </section>
+    .info {
+      display: grid;
+      gap: 15px;
+    }
 
-    <section>
-      <h2>Experience</h2>
-      <h3>DevOps Engineer – Tata Consultancy Services (TCS), Bengaluru (Feb 2022 – Present)</h3>
-      <ul>
-        <li>Built and maintained CI/CD pipelines for 50+ microservices using Azure DevOps, Docker, Helm on Kubernetes (Kubeadm, EKS, AKS)</li>
-        <li>Implemented probes, resource limits, HPA for high availability deployments</li>
-        <li>Automated infrastructure using Terraform with S3 + DynamoDB locking</li>
-        <li>Setup observability using Prometheus, Grafana, ELK Stack, Fluentd, APM</li>
-        <li>Handled issues like image pull failures, misconfigured volumes, affinity rules</li>
-        <li>Managed TLS, NGINX routing, and reverse proxy with OpenSSL and certs</li>
-        <li>Supported legacy app CI/CD for .NET, PHP, Java on NGINX, Tomcat</li>
-      </ul>
-    </section>
+    .info-box {
+      background: rgba(255,255,255,0.04);
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
 
-    <section>
-      <h2>Projects</h2>
-      <h3>CI/CD Platform for Retail Microservices (CWMS)</h3>
-      <ul>
-        <li>Built GitOps pipelines with Helm and Docker multistage builds (Alpine/distroless)</li>
-        <li>Integrated SonarQube, Trivy for secure DevSecOps workflows</li>
-        <li>Managed Helm charts, ingress rules, TLS secrets, Istio gateway/virtual service</li>
-        <li>Enabled K8s dashboards and observability for developers</li>
-      </ul>
-
-      <h3>Legacy App Modernization – Partner Onboarding System</h3>
-      <ul>
-        <li>Migrated monoliths (.NET, Java, PHP) into Azure DevOps CI/CD flows</li>
-        <li>Automated VM deployments with environment variables & config separation</li>
-        <li>Enabled log monitoring and APM for performance analysis</li>
-        <li>Initiated containerization for Kubernetes transition</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <p><strong>Bachelor of Technology (B.Tech)</strong> — Mechanical Engineering (2021)<br>
-        Audisankara College of Engineering and Technology, Gudur, Nellore</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Made with 💻 by Vinod Dampuru | <a href="https://vinod733-code.github.io/Portfolio/">https://vinod733-code.github.io/Portfolio/</a></p>
-  </footer>
-
-  <script>
-    // Example JS: alert on page load
-    window.onload = () => {
-      console.log("Portfolio Loaded: Vinod Dampuru");
-    };
-  </script>
-</body>
-
-</html>
+    .i
+```
